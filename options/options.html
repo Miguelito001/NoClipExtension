@@ -1,0 +1,15 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><link rel="stylesheet" href="options.css"></head>
+<body><main><h1>NoClipExtension — Snippets</h1><p class="muted">Crie comandos como <code>/fetch</code> e use-os em editores CodeMirror compatíveis.</p>
+<div class="card">
+  <h2>Comportamento</h2>
+  <label style="display:flex;gap:10px;align-items:center;color:#eef2f7">
+    <input id="universalSnippets" type="checkbox" style="width:auto">
+    Expandir snippets em campos comuns e editores compatíveis
+  </label>
+  <p class="small muted">Suporte inicial: input, textarea, contenteditable e CodeMirror 5. Também funciona em iframes onde o Chrome permite content scripts.</p>
+</div>
+<div class="card"><div class="row"><input id="command" placeholder="/comando"><input id="replacement" placeholder="Texto/código de substituição"></div>
+<br><button id="add">Adicionar snippet</button></div>
+<div class="card"><h2>Meus snippets</h2><div id="list"></div></div>
+<p class="small muted">Os snippets ficam em chrome.storage.local. Nenhum conteúdo é enviado pelo NoClipExtension.</p>
+<script type="module" src="options.js"></script></main></body></html>

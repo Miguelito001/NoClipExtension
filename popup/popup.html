@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NoClipExtension</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="popup-shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">&lt;/&gt;</div>
+        <div>
+          <h1>NoClipExtension</h1>
+          <p>Developer Productivity Tools</p>
+        </div>
+      </div>
+      <button id="options" class="icon-button" title="Gerenciar snippets" aria-label="Gerenciar snippets">⚙</button>
+    </header>
+
+    <section class="workspace">
+      <div class="field">
+        <label for="tool">Ferramenta</label>
+        <select id="tool">
+          <optgroup label="JSON">
+            <option value="json-format">Formatar JSON</option>
+            <option value="json-minify">Minificar JSON</option>
+          </optgroup>
+          <optgroup label="Base64">
+            <option value="base64-encode">Base64 Encode</option>
+            <option value="base64-decode">Base64 Decode</option>
+          </optgroup>
+          <optgroup label="URL">
+            <option value="url-encode">URL Encode</option>
+            <option value="url-decode">URL Decode</option>
+          </optgroup>
+          <optgroup label="Outros">
+            <option value="jwt-inspect">Inspecionar JWT</option>
+            <option value="timestamp">Converter timestamp</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div class="editor-grid">
+        <div class="pane">
+          <div class="pane-header">
+            <label for="input">Entrada</label>
+            <button id="clear" class="text-button" type="button">Limpar</button>
+          </div>
+          <textarea id="input" spellcheck="false" placeholder="Cole ou digite o conteúdo..."></textarea>
+        </div>
+
+        <div class="pane">
+          <div class="pane-header">
+            <span>Resultado</span>
+            <button id="copy" class="text-button" type="button">Copiar</button>
+          </div>
+          <pre id="result" class="result empty">O resultado aparece aqui.</pre>
+        </div>
+      </div>
+
+      <button id="run" class="primary" type="button">
+        <span>Executar</span>
+        <span class="shortcut">Ctrl ↵</span>
+      </button>
+    </section>
+
+    <footer>
+      <button id="openNoclip" class="footer-link" type="button">Abrir NoClipCode ↗</button>
+      <button id="openSnippets" class="footer-link" type="button">Snippets</button>
+    </footer>
+  </main>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
