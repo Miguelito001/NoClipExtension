@@ -1,57 +1,45 @@
-# NoClipExtension 2.2.0
+# NoClipExtension — Chrome productivity extension
 
-**NoClipExtension** é a evolução do antigo CodeHelp para uma extensão de produtividade integrada ao ecossistema **NoClipCode**.
+Extensão de navegador para expansão de snippets e utilitários de desenvolvimento. Integra o ecossistema [NoClipCode](https://www.noclipcode.com/).
 
-## Proposta
+**Versão documentada:** 2.2.0 · **Nome anterior:** CodeHelp
 
-Crie snippets como:
+## Problema que resolve
 
-- `/email`
-- `/fetch`
-- `/sql`
-- `/assinatura`
-- `/groovyEach`
+Reescrever trechos frequentes de texto e código em diferentes sites e editores é repetitivo. A NoClipExtension permite salvar atalhos e expandi-los enquanto o usuário digita.
 
-e expanda os atalhos diretamente enquanto digita.
+Exemplos de gatilhos: `/email`, `/fetch`, `/sql`, `/assinatura`, `/groovyEach`.
 
-## Suporte atual
+## Compatibilidade documentada
 
-- `<input>` de texto
-- `<textarea>`
-- elementos `contenteditable`
-- CodeMirror 5
-- iframes onde extensões do Chrome podem executar content scripts
+| Ambiente | Suporte descrito |
+|---|---|
+| Campos `input` de texto | Sim |
+| `textarea` | Sim |
+| `contenteditable` | Sim |
+| CodeMirror 5 | Sim |
+| Iframes | Quando o Chrome permite executar content scripts |
 
-## Developer Tools
+## Ferramentas de desenvolvimento
 
-A extensão também mantém ferramentas rápidas para:
+- Formatar e minificar JSON
+- Encode/decode de Base64 e URL
+- Inspecionar localmente header e payload de JWT
+- Converter timestamps Unix
+- Acessar o NoClipCode
 
-- JSON: formatar e minificar
-- Base64: encode/decode
-- URL: encode/decode
-- JWT: inspeção local de header/payload
-- Timestamp: conversão Unix/data
-- integração com o NoClipCode
+## Privacidade e armazenamento
 
-## Privacidade
+Os snippets são armazenados em `chrome.storage.local`. As transformações descritas nesta versão são executadas localmente.
 
-Os snippets ficam armazenados em `chrome.storage.local`.
-As transformações implementadas nesta versão são processadas localmente.
+## Evolução
 
-## Histórico
+O projeto começou como **CodeHelp**, inicialmente focado em atalhos para CodeMirror. A versão 2.2.0 consolidou a identidade NoClipExtension e o suporte a diferentes campos.
 
-O projeto nasceu como **CodeHelp**, uma extensão focada em atalhos `/comando` para produtividade em CodeMirror.
+## Publicação
 
-A partir da versão **2.2.0**, passa a se chamar **NoClipExtension**, mantendo a ideia de expansão de snippets e ampliando o suporte para campos e editores diferentes.
+Antes de atualizar uma publicação na Chrome Web Store, conferir nome, descrição, screenshots, ícones, política de privacidade e referências antigas ao CodeHelp.
 
-## Observação para Chrome Web Store
+## Documentação a ampliar
 
-Esta build altera apenas a identidade exibida e mantém o funcionamento da 2.1.2.
-Ao atualizar o listing existente, revise também:
-
-- nome do item
-- descrição curta e completa
-- screenshots
-- ícones
-- política de privacidade
-- textos que ainda mencionem CodeHelp no Developer Dashboard
+Adicionar screenshots, instruções de instalação para desenvolvimento, arquitetura da extensão e resultados de testes verificados.
